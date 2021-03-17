@@ -26,9 +26,9 @@ print("COMPUTER CHOICE:", c)
 if u == c:
     print("It's a tie!")
 elif u == "rock" and c == "paper" or u == "paper" and c == "scissors" or u == "scissors" and c == "rock":
-    print("The computer wins")
+    print("Sorry, the computer won.")
 else:
-    print("The user wins")
+    print("Congrats, you win!")
 
 
 #if u == "rock" and c == "rock" or u == "paper" and c == "paper" or u == "scissors" and c == "scissors":
