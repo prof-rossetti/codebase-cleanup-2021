@@ -44,3 +44,19 @@ elif u == "scissors" and c == "paper":
     print("The user wins")
 elif u == "scissors" and c == "scissors":
     print("It's a tie!")
+
+if u == "rock": 
+    if c == "rock": 
+        print("----")
+    elif c == "paper":
+        print("----")
+    elif c == "scissors""
+        print("----")
+elif u == "paper": 
+    ...
+elif u == "scissors": 
+    ...
+
+#there are even less complex ways of doing this 
+#using a single dictionary
+#touple approace 
