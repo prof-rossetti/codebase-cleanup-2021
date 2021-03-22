@@ -2,9 +2,17 @@ import os
 from datetime import datetime
 from pandas import read_csv
 
-
+#function based on in-class example
 def format_usd(my_price):
+    """
+    Formats a number as USD with dollar sign, two decimals, and thousands separator
+
+    Params my_price is a number (int or float) that we want to format_usd
+
+    Examples: format_usd(19.99)
+    """
     return f"${my_price:,.2f}"
+
 
 
 # READ INVENTORY OF PRODUCTS
