@@ -4,6 +4,17 @@ from pandas import read_csv
 
 # READ INVENTORY OF PRODUCTS
 def format_usd(my_price):
+    '''
+    Formats numbers in USD
+
+    Params:
+        n (numeric, like int or float) the number to be formatted
+
+    Examples:
+        enlarge(8)
+        enlarge(4.5)
+    
+    '''
     return f"${my_price:,.2f}"
 
 products_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")
