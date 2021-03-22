@@ -4,6 +4,16 @@ from pandas import read_csv
 
 
 def format_usd(my_price):
+    '''
+    Formats number to USD, rounding to 2 decimal points.
+
+    Params:
+        my_price (numeric (int/float) to format)
+
+    Example:
+        format_usd(19.29123) 
+    
+    '''
     return f"${my_price:,.2f}"
 
 # READ INVENTORY OF PRODUCTS
@@ -63,3 +73,6 @@ with open(receipt_filepath, "w") as receipt_file:
     receipt_file.write("\n---------")
     receipt_file.write("\nTHANK YOU! PLEASE COME AGAIN SOON!")
     receipt_file.write("\n---------")
+
+
+format_usd()
