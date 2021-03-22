@@ -5,14 +5,14 @@ from pandas import read_csv
 # READ INVENTORY OF PRODUCTS
 def format_usd(my_price):
     '''
-    Formats numbers in USD
+    Formats numbers in USD with a dollar sign, two decimal, and a comma separtaor
 
     Params:
         n (numeric, like int or float) the number to be formatted
 
     Examples:
-        enlarge(8)
-        enlarge(4.5)
+        format_usd(8)
+        format_usd(4.5)
     
     '''
     return f"${my_price:,.2f}"
