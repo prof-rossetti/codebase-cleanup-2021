@@ -33,7 +33,7 @@ print("COMPUTER CHOICE:", c)
 #elif u == "paper" and c == "rock":
 #     print("The computer wins")
 #elif u == "paper" and c == "paper":
-    print("It's a tie!")
+#    print("It's a tie!")
 #elif u == "paper" and c == "scissors":
 #    print("The user wins")
 #
