@@ -6,7 +6,7 @@ VALID_OPTIONS = ["rock", "paper", "scissors"]
 def determine_winner(choice1, choice2):
     """
     Params:
-        choice1 and choice2 are ...
+        choice1 and choice2 are strings that are one of the valid options in the game
     """
     winners = {
             "rock":{
@@ -25,6 +25,7 @@ def determine_winner(choice1, choice2):
                 "scissors": None,
             }
     }
+    return winners[choice1][choice2]
 
 if __name__ == "__main__":
 
