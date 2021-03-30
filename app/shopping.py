@@ -13,7 +13,8 @@ def format_usd(my_price):
     Examples: format_usd(10)
     """
     return f"${my_price:,.2f}"
-
+ 
+ 
 
 # PREVENT ALL THE APP CODE FROM BEING IMPORTED 
 # BUT STILL BEA BLE TO RUN IT FROM THE COMMAND LINE IS LIKE THIS ... 
