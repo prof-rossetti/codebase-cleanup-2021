@@ -16,13 +16,13 @@ def determine_winner(choice1, choice2):
         }, 
         "paper":{
             "rock": "paper", 
-            "paper": None, # tie 
+            "paper": None, 
             "scissors": "scissors", 
         }, 
         "scissors":{ 
             "rock": "rock", 
             "paper": "scissors", 
-            "scissors": None, # tie 
+            "scissors": None, 
         }, 
     }
     winning_choice = winners[choice1][choice2]
