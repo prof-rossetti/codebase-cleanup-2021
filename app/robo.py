@@ -8,6 +8,8 @@ import plotly.express as px
 
 load_dotenv()
 
+# import our format_usd function from our shopping cart; don't forget docstring 
+
 API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", default="abc123")
 
 # FETCH DATA
