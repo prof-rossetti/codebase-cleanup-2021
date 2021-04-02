@@ -31,7 +31,6 @@ def determine_winner(choice1, choice2):
 if __name__ == "__main__":
 
     # USER SELECTION 
-
     u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
     print("USER CHOICE:", u)
     if u not in VALID_OPTIONS:
@@ -42,7 +41,6 @@ if __name__ == "__main__":
     
     c = choice(VALID_OPTIONS)
     print("COMPUTER CHOICE:", c)
-
 
     # DETERMINATION OF WINNER
     winner = determine_winner(u, c)
