@@ -7,7 +7,7 @@ def format_usd(my_price):
     """
     Formats a number as USD with dollar sign and two decimals (and also thousands separator)
 
-    Params: my_price is a number (int or float) that we wnat to format 
+    Params: my_price is a number (int or float) that we want to format into USD format 
 
     Examples: format_usd(10)
     """
@@ -16,6 +16,8 @@ def format_usd(my_price):
 
 def lookup_product(product_id, all_products): 
     """
+    Looks up matching products 
+    
     Params: 
     product_id (str) like "8" 
     all_products (list of dict) each dict should have "id", "name", "department", "aisle", and "price" attributes 
