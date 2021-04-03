@@ -14,7 +14,7 @@
 # ... this minimizes the number of network requests and reduces the cost of running tests.
 #
 
-#import pytest
+import pytest
 #
 #@pytest.fixture(scope="module")
 #def parsed_googl_response():
