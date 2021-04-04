@@ -1,4 +1,2 @@
 
-# TODO: import some code
-
-# TODO: test the code
+from app.shopping
