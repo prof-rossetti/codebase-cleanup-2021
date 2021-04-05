@@ -2,6 +2,39 @@ import os
 from datetime import datetime
 from pandas import read_csv
 
+<<<<<<< Updated upstream
+=======
+
+def format_usd(my_price):
+    """
+    Formats a number as USD with dollar sign and two decimals (and also thousands separator)
+    
+    Params my_price is a number (int or float) that we want to format
+    
+    Examples: format_usd(10)
+    """
+    return f"${my_price:,.2f}"
+    
+# READ INVENTORY OF PRODUCTS
+
+products_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")
+products_df = read_csv(products_filepath)
+products = products_df.to_dict("records")
+
+# CAPTURE PRODUCT SELECTIONS
+
+selected_products = []
+while True:
+    selected_id = input("Please select a product identifier: ")
+    if selected_id.upper() == "DONE":
+        break
+    else:
+        matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+        if any(matching_products):
+            selected_products.append(matching_products[0])
+        else:
+            print("OOPS, Couldn't find that product. Please try again.")
+>>>>>>> Stashed changes
 
 def format_usd(my_price):
     """
