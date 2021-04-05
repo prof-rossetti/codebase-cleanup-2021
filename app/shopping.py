@@ -20,6 +20,7 @@ if __name__ == "__main__":
     products_df = read_csv(products_filepath)
     products = products_df.to_dict("records")
 
+
     # CAPTURE PRODUCT SELECTIONS
 
     selected_products = []
@@ -34,12 +35,6 @@ if __name__ == "__main__":
             else:
                 print("OOPS, Couldn't find that product. Please try again.")
 
-    checkout_at = datetime.now()
-
-    subtotal = sum([float(p["price"]) for p in selected_products])
-
-    # PRINT RECEIPT
-
     print("---------")
     print("CHECKOUT AT: " + str(checkout_at.strftime("%Y-%M-%d %H:%m:%S")))
     print("---------")
@@ -53,6 +48,27 @@ if __name__ == "__main__":
     print("---------")
     print("THANK YOU! PLEASE COME AGAIN SOON!")
     print("---------")
+
+        checkout_at = datetime.now()
+
+        subtotal = sum([float(p["price"]) for p in selected_products])
+
+        # PRINT RECEIPT
+
+        print("---------")
+        print("CHECKOUT AT: " + str(checkout_at.strftime("%Y-%M-%d %H:%m:%S")))
+        print("---------")
+        for p in selected_products:
+
+            print("SELECTED PRODUCT: " + p["name"] + "   " + format_usd(p["price"]))
+
+        print("---------")
+        print(f"SUBTOTAL: {format_usd(subtotal)}")
+        print(f"TAX: {format_usd(subtotal * 0.0875)}")
+        print(f"TOTAL: {format_usd(subtotal * 1.0875)}")
+        print("---------")
+        print("THANK YOU! PLEASE COME AGAIN SOON!")
+        print("---------")
 
     # WRITE RECEIPT TO FILE
 
