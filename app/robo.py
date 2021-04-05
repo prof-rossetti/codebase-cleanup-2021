@@ -1,4 +1,7 @@
 
+
+# import our format_usd function from shopping
+
 import os
 import json
 from dotenv import load_dotenv
@@ -16,6 +19,8 @@ symbol = input("Please input a stock symbol (e.g. 'MSFT'): ")
 request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={API_KEY}"
 response = requests.get(request_url)
 parsed_response = json.loads(response.text)
+
+## extra comment 
 
 # PROCESS DATA
 
