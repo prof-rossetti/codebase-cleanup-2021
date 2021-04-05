@@ -5,9 +5,11 @@ from random import choice
 # USER SELECTION
 #
 
+VALID_OPTIONS = ["rock", "paper", "scissors"]
+
 u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
 print("USER CHOICE:", u)
-if u not in ["rock", "paper", "scissors"]:
+if u not in VALID_OPTIONS:
     print("OOPS, TRY AGAIN")
     exit()
 
@@ -15,30 +17,46 @@ if u not in ["rock", "paper", "scissors"]:
 # COMPUTER SELECTION
 #
 
-c = choice(["rock", "paper", "scissors"])
+c = choice(VALID_OPTIONS)
 print("COMPUTER CHOICE:", c)
 
 #
 # DETERMINATION OF WINNER
 #
 
-if u == "rock" and c == "rock":
-    print("It's a tie!")
-elif u == "rock" and c == "paper":
-    print("The computer wins")
-elif u == "rock" and c == "scissors":
-    print("The user wins")
+#if u == "rock" and c == "rock":
+#    print("It's a tie!")
+#elif u == "rock" and c == "paper":
+#    print("The computer wins")
+#elif u == "rock" and c == "scissors":
+#    print("The user wins")
+#
+#elif u == "paper" and c == "rock":
+#    print("The computer wins")
+#elif u == "paper" and c == "paper":
+#    print("It's a tie!")
+#elif u == "paper" and c == "scissors":
+#    print("The user wins")
+#
+#elif u == "scissors" and c == "rock":
+#    print("The computer wins")
+#elif u == "scissors" and c == "paper":
+#    print("The user wins")
+#elif u == "scissors" and c == "scissors":
+#    print("It's a tie!")
 
+
+if c == u: 
+    print ("It's a Tie!")
 elif u == "paper" and c == "rock":
-    print("The computer wins")
-elif u == "paper" and c == "paper":
-    print("It's a tie!")
-elif u == "paper" and c == "scissors":
-    print("The user wins")
-
-elif u == "scissors" and c == "rock":
-    print("The computer wins")
+    print ("Yay! You Won!")    
+elif u == "rock" and c == "scissors":
+    print("Yay! You Won!")
 elif u == "scissors" and c == "paper":
-    print("The user wins")
-elif u == "scissors" and c == "scissors":
-    print("It's a tie!")
+    print("Yay! You Won!")  
+elif u == "paper" and c == "scissors":
+    print ("Boo! You Lost!")
+elif u == "rock" and c == "paper":
+    print ("Boo! You Lost!")
+elif u == "scissors" and c == "rock":
+    print ("Boo! You Lost!")
