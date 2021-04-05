@@ -3,23 +3,30 @@ from random import choice
 
 def determine_winner(c,u):
 
-    if u == c:
+    winners = {
+    "rock":{
+        "rock": None, # represents a tie
+        "paper": "paper",
+        "scissors": "rock",
+    },
+    "paper":{
+        "rock": "paper",
+        "paper": None, # represents a tie
+        "scissors": "scissors",
+    },
+    "scissors":{
+        "rock": "rock",
+        "paper": "scissors",
+        "scissors": None, # represents a tie
+    },
+    }
+    winning_choice = winners[u][c]
+    if winning_choice == u:
+        out = "The user wins"
+    elif winning_choice == c:
+        out = "The computer wins"
+    elif winning_choice is None:
         out = "It's a tie!"
-
-    elif u == "rock" and c == "paper":
-        out = "The computer wins"
-    elif u == "rock" and c == "scissors":
-        out = "The user wins"
-
-    elif u == "paper" and c == "scissors":
-        out = "The computer wins"
-    elif u == "paper" and c == "rock":
-        out = "The user wins"
-
-    elif u == "scissors" and c == "rock":
-        out = "The computer wins"
-    elif u == "scissors" and c == "paper":
-        out = "The user wins"
 
     return out
 
