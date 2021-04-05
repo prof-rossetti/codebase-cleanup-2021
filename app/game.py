@@ -5,40 +5,58 @@ from random import choice
 # USER SELECTION
 #
 
-u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
-print("USER CHOICE:", u)
-if u not in ["rock", "paper", "scissors"]:
-    print("OOPS, TRY AGAIN")
-    exit()
+def determine_winner(u, c):
+    """
 
-#
-# COMPUTER SELECTION
-#
+    determines the winner of the game
 
-c = choice(["rock", "paper", "scissors"])
-print("COMPUTER CHOICE:", c)
+    ex. will determine that the winner, if user chooses rock and computer chooses paper, is the computer
 
-#
-# DETERMINATION OF WINNER
-#
+    """
+    winners= {
+        "rock": {
+            "rock": None,
+            "paper": "paper",
+            "scissors": "rock",
+        },
+        "paper": {
+            "rock": "paper",
+            "paper": None,
+            "scissors": "scissors",
+        },
+        "scissors": {
+            "rock": "rock",
+            "paper": "scissors",
+            "scissors": None,
+        },
+    }
+    winning_choice= winners[u][c]
+    return winning_choice
+if __name__ == "__main__":
 
-if u == "rock" and c == "rock":
-    print("It's a tie!")
-elif u == "rock" and c == "paper":
-    print("The computer wins")
-elif u == "rock" and c == "scissors":
-    print("The user wins")
+    valid_options = ["rock", "paper", "scissors"]
+    u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
+    print("USER CHOICE:", u)
+    if u not in valid_options:
+        print("OOPS, TRY AGAIN")
+        exit()
 
-elif u == "paper" and c == "rock":
-    print("The computer wins")
-elif u == "paper" and c == "paper":
-    print("It's a tie!")
-elif u == "paper" and c == "scissors":
-    print("The user wins")
+    #
+    # COMPUTER SELECTION
+    #
 
-elif u == "scissors" and c == "rock":
-    print("The computer wins")
-elif u == "scissors" and c == "paper":
-    print("The user wins")
-elif u == "scissors" and c == "scissors":
-    print("It's a tie!")
+    c = choice(valid_options)
+    print("COMPUTER CHOICE:", c)
+
+    #
+    # DETERMINATION OF WINNER
+    #
+
+    winner=determine_winner(u, c)
+
+    if winner == u:
+        print("You won!")
+    elif winner == c:
+        print("You lost.")
+    elif winner == None:
+        print("There's a tie!")
