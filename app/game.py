@@ -6,26 +6,27 @@ def determine_winner(c,u):
     l = "The computer wins"
 
     if u == c:
-        return "It's a tie!"
+        out = "It's a tie!"
 
     elif u == "rock":
         if c == "paper":
-            return l
+            out = l
         elif c == "scissors":
-            return w
+            out = w
 
     elif u == "paper":
         if c == "scissors":
-            return l
+            out = l
         elif c == "rock":
-            return w
+            out = w
 
     elif u == "scissors":
         if c == "rock":
-            return l
+            out = l
         elif c == "paper":
-            return w
+            out = w
 
+    return out
 
 #
 # USER SELECTION
