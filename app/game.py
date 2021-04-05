@@ -5,31 +5,14 @@ from random import choice
 # USER SELECTION
 #
 
-valid_options = ["rock", "paper", "scissors"]
-u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
-print("USER CHOICE:", u)
-if u not in valid_options:
-    print("OOPS, TRY AGAIN")
-    exit()
+def determine_winner():
+    """
 
-#
-# COMPUTER SELECTION
-#
+    determines the winner of the game
 
-c = choice(valid_options)
-print("COMPUTER CHOICE:", c)
+    ex. will determine that the winner, if user chooses rock and computer chooses paper, is the computer
 
-#
-# DETERMINATION OF WINNER
-#
-#def determine_winner():
-    #"""
-
-    #determines the winner of the game
-
-    #ex. will determine that the winner, if user chooses rock and computer chooses paper, is the computer
-
-    #"""
+    """
     
     if u == c:
         print("It's a tie!")
@@ -51,3 +34,25 @@ print("COMPUTER CHOICE:", c)
             print("The computer wins")
         elif c == "paper":
             print("The user wins")
+
+if __name__ == "__main__":
+
+    valid_options = ["rock", "paper", "scissors"]
+    u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
+    print("USER CHOICE:", u)
+    if u not in valid_options:
+        print("OOPS, TRY AGAIN")
+        exit()
+
+    #
+    # COMPUTER SELECTION
+    #
+
+    c = choice(valid_options)
+    print("COMPUTER CHOICE:", c)
+
+    #
+    # DETERMINATION OF WINNER
+    #
+
+    determine_winner()
