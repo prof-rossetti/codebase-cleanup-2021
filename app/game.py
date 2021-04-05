@@ -4,7 +4,6 @@ from random import choice
 #
 # USER SELECTION
 #
-
 def determineWinner(userChoice, ranChoice):
     
     if u == "rock" and c == "rock":
@@ -15,11 +14,11 @@ def determineWinner(userChoice, ranChoice):
         print("You've won!")
 
     elif u == "paper" and c == "rock":
-        print("The computer wins")
+        print("You've won!")
     elif u == "paper" and c == "paper":
         print("It's a tie!")
     elif u == "paper" and c == "scissors":
-        print("You win!")
+        print("The computer wins")
 
     elif u == "scissors" and c == "rock":
         print("The computer wins")
