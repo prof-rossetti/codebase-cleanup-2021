@@ -2,29 +2,27 @@
 from random import choice
 
 def determine_winner(c,u):
-    w = "The user wins"
-    l = "The computer wins"
 
     if u == c:
         out = "It's a tie!"
 
     elif u == "rock":
         if c == "paper":
-            out = l
+            out = "The computer wins"
         elif c == "scissors":
-            out = w
+            out = "The user wins"
 
     elif u == "paper":
         if c == "scissors":
-            out = l
+            out = "The computer wins"
         elif c == "rock":
-            out = w
+            out = "The user wins"
 
     elif u == "scissors":
         if c == "rock":
-            out = l
+            out = "The computer wins"
         elif c == "paper":
-            out = w
+            out = "The user wins"
 
     return out
 
