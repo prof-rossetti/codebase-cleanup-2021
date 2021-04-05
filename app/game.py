@@ -22,24 +22,32 @@ print("COMPUTER CHOICE:", c)
 #
 # DETERMINATION OF WINNER
 #
+def determine_winner():
+    """
 
-if u == "rock" and c == "rock":
-    print("It's a tie!")
-elif u == "rock" and c == "paper":
-    print("The computer wins")
-elif u == "rock" and c == "scissors":
-    print("The user wins")
+    determines the winner of the game
 
-elif u == "paper" and c == "rock":
-    print("The computer wins")
-elif u == "paper" and c == "paper":
-    print("It's a tie!")
-elif u == "paper" and c == "scissors":
-    print("The user wins")
+    ex. will determine that the winner, if user chooses rock and computer chooses paper, is the computer
 
-elif u == "scissors" and c == "rock":
-    print("The computer wins")
-elif u == "scissors" and c == "paper":
-    print("The user wins")
-elif u == "scissors" and c == "scissors":
-    print("It's a tie!")
+    """
+    
+    if u == c:
+        print("It's a tie!")
+
+    elif u == "rock":
+        if c == "paper":
+            print("The computer wins")
+        elif c == "scissors":
+            print("The user wins")
+
+    elif u == "paper": 
+        if c == "rock":
+            print("The computer wins")
+        elif c == "scissors":
+            print("The user wins")
+
+    elif u == "scissors":
+        if c == "rock":
+            print("The computer wins")
+        elif c == "paper":
+            print("The user wins")
