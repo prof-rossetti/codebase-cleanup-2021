@@ -10,6 +10,7 @@ def format_usd(my_price):
     """
     return f"${my_price:,.2f}"
 
+
 #this part before if __name__ section is from https://github.com/s2t2/codebase-cleanup-2021/pull/5/commits/26b96b5ca7ac0217a5c71e9c0f85578af3c38d03
 def lookup_product(product_id, all_products):
     """
@@ -24,16 +25,14 @@ def lookup_product(product_id, all_products):
         return None
 
 
-# Prevent all of the app code from being imported
+# Prevent all of the app code from being - this part done in class
 # But still be able to run it from the command line:
 if __name__ == "__main__":
-
 
     #READ INVENTORY OF PRODUCTS
     products_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")
     products_df = read_csv(products_filepath)
     products = products_df.to_dict("records")
-
 
     #CAPTURE PRODUCT SELECTIONS
     selected_products = []
@@ -51,8 +50,7 @@ if __name__ == "__main__":
     checkout_at = datetime.now()
     subtotal = sum([float(p["price"]) for p in selected_products])
     
-    
-    # PRINT RECEIPT
+        # PRINT RECEIPT
     print("---------")
     print("CHECKOUT AT: " + str(checkout_at.strftime("%Y-%M-%d %H:%m:%S")))
     print("---------")
@@ -67,7 +65,6 @@ if __name__ == "__main__":
     print("---------")
     print("THANK YOU! PLEASE COME AGAIN SOON!")
     print("---------")
-        
         
     # WRITE RECEIPT TO FILE
     receipt_id = checkout_at.strftime('%Y-%M-%d-%H-%m-%S')

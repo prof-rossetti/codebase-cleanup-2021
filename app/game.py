@@ -1,12 +1,12 @@
 
 from random import choice
 
-
 choices = ["rock", "paper", "scissors"]
 
 def determine_winner(choice1, choice2):
     """
-    Params: choice1 and choice 2 are both strings: one of "rock", "paper", or "scissors"
+    Will help to determine a winner of our game
+    Params: choice1 and choice2 are both strings: one of "rock", "paper", or "scissors"
     """
     winners = {
         "rock":{
@@ -27,6 +27,7 @@ def determine_winner(choice1, choice2):
     }
     winning_choice = winners[choice1][choice2]
     return winning_choice
+
 
 if __name__ == '__main__':
   
@@ -51,32 +52,10 @@ if __name__ == '__main__':
         print("COMPUTER WON!")
     elif winner == None:
         print("TIE!")
-        
+
 #   if u == c:
 #       print("It's a tie!")
 #   elif u == "rock" and c == "paper" or u == "paper" and c == "scissors" or u == "scissors" and c == "rock":
 #       print("Sorry, the computer won.")
 #   else:
 #       print("Congrats, you win!")
-
-
-#if u == "rock" and c == "rock" or u == "paper" and c == "paper" or u == "scissors" and c == "scissors":
-#    print("It's a tie!")
-#elif u == "rock" and c == "paper":
-#    print("The computer wins")
-#elif u == "rock" and c == "scissors":
-#    print("The user wins")
-#
-#elif u == "paper" and c == "rock":
-#    print("The computer wins")
-#elif u == "paper" and c == "paper":
-#    print("It's a tie!")
-#elif u == "paper" and c == "scissors":
-#    print("The user wins")
-#
-#elif u == "scissors" and c == "rock":
-#    print("The computer wins")
-#elif u == "scissors" and c == "paper":
-#    print("The user wins")
-#elif u == "scissors" and c == "scissors":
-#    print("It's a tie!")
