@@ -23,6 +23,16 @@
 #
 # MOCK DATA
 #
+import pytest
+from app.robo import fetch_data
+
+@pytest.fixture(scope="module")
+def parsed_googl_response():
+    return fetch_data("GOOGL")
+
+@pytest.fixture(scope="module")
+def parsed_oops_response():
+    return fetch_data("OOPS")
 
 mock_error_response = {
     "Error Message": "Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for TIME_SERIES_DAILY."
