@@ -5,6 +5,8 @@ from random import choice
 # USER SELECTION
 #
 
+
+
 VALID_OPTIONS = ["rock", "paper", "scissors"]
 
 u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
