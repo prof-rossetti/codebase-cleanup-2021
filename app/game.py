@@ -22,14 +22,14 @@ print("COMPUTER CHOICE:", c)
 #
 # DETERMINATION OF WINNER
 #
-def determine_winner():
-    """
+#def determine_winner():
+    #"""
 
-    determines the winner of the game
+    #determines the winner of the game
 
-    ex. will determine that the winner, if user chooses rock and computer chooses paper, is the computer
+    #ex. will determine that the winner, if user chooses rock and computer chooses paper, is the computer
 
-    """
+    #"""
     
     if u == c:
         print("It's a tie!")
