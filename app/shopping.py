@@ -47,7 +47,7 @@ for p in selected_products:
     print("SELECTED PRODUCT: " + p["name"] + "   " + '${:.2f}'.format(p["price"]))
 
 print("---------")
-print(f"SUBTOTAL: format_usd{subtotal}")
+print(f"SUBTOTAL: {format_usd(subtotal)}")
 print(f"TAX: {format_usd(subtotal * 0.0875)}")
 print(f"TOTAL: {format_usd((subtotal * 0.0875) + subtotal)}")
 print("---------")
