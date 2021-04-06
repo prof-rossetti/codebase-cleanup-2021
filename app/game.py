@@ -6,25 +6,31 @@ from random import choice
 #
 def determine_winner(u, c):
     
-    if u == "rock" and c == "rock":
+  if u == "rock" 
+    if (c == "rock"):
         print("It's a tie!")
-    elif u == "rock" and c == "paper":
+    if (c == "paper"):
         print("The computer wins")
-    elif u == "rock" and c == "scissors":
-        print("You've won!")
-    elif u == "paper" and c == "rock":
-        print("You've won!")
-    elif u == "paper" and c == "paper":
-        print("It's a tie!")
-    elif u == "paper" and c == "scissors":
-        print("The computer wins")
+        break
+    if (c == "scissors"):
+        print("The user wins")
 
-    elif u == "scissors" and c == "rock":
+if u == "paper"
+    if (c == "rock"):
         print("The computer wins")
-    elif u == "scissors" and c == "paper":
-        print("You win!")
-    elif u == "scissors" and c == "scissors":
+    if (c == "paper"):
         print("It's a tie!")
+    if (c == "scissors"):
+        print("The user wins")
+
+if u == "scissors"
+    if (c == "rock"):
+        print("The computer wins")
+    if (c == "paper":
+        print("The user wins")
+    if (c == "scissors"):
+        print("It's a tie!")
+
 
 
 VALID_OPTIONS = ["rock", "paper", "scissors"]
