@@ -5,7 +5,10 @@
 
 from conftest import mock_msft_response, mock_amzn_response 
 from pandas import DataFrame
+import os
+import pytest
 
+from app.my_script import get_response
 from app.robo import process_data, summarize_data, prepare_data_for_charting
 
 def test_fetch(parsed_googl_response): 
@@ -45,3 +48,14 @@ def test_charting():
     chart_df = prepare_data_for_charting(df)
     assert chart_df["date"].tolist() == ['2030-03-10', '2030-03-11', '2030-03-12', '2030-03-15', '2030-03-16']
 
+# expect default environment variable setting of "CI=true" on Travis CI
+# see: https://docs.travis-ci.com/user/environment-variables/#default-environment-variables
+#CI_ENV = os.getenv("CI") == "true"
+
+#@pytest.mark.skipif(CI_ENV==True, reason="to avoid issuing HTTP requests on the CI server") # skips this test on CI
+#def test_get_response():
+#    symbol = "NFLX"
+#    parsed_response = get_response(symbol) # issues an HTTP request (see function definition below)
+
+#    assert isinstance(parsed_response, dict)
+#    assert parsed_response["Meta Data"]["2. Symbol"] == symbol
