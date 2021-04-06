@@ -20,6 +20,16 @@
 #def parsed_googl_response():
 #    return "TODO: FETCH AND PARSE SOME REAL LIVE DATA"
 
+import pytest
+from app.robo import fetch_data
+
+@pytest.fixture(scope="module")
+def parsed_googl_response(): 
+    return fetch_data("GOOGL")
+
+@pytest.fixture(scope="module")
+def parsed_oops_response():
+    return fetch_data("OOPS")
 #
 # MOCK DATA
 #
