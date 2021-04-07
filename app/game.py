@@ -20,11 +20,11 @@ def determine_winner(u, c):
         print("The Computer Wins!")
 
     return winner
-         
+
+VALID_OPTIONS = ["rock", "paper", "scissors"]
+
 if __name__ == "__main__":
-
-    VALID_OPTIONS = ["rock", "paper", "scissors"]
-
+    
     u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
     print("USER CHOICE:", u)
     if u not in VALID_OPTIONS:
