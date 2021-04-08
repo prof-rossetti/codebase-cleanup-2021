@@ -5,7 +5,16 @@ from pandas import read_csv
 # READ INVENTORY OF PRODUCTS
 
 def format_usd(my_price):
-    return f"${my_price:,.2f}"
+    """
+    Formats a number as USD with dolalr sign and two decimals
+
+    params: my price = a number (int or float) that we want to format
+
+    examples: format_usd(10)
+
+    """
+    return f"${my_price:,.2f}
+
 
 
 
